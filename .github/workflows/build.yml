@@ -23,7 +23,7 @@ jobs:
         run: |
             git config --global url."https://github.com/".insteadOf ssh://git@github.com/
             yarn install
-            yarn run build
+            node esbuild.config.mjs production
 
       - name: Upload Build Artifacts
         uses: actions/upload-artifact@v4
